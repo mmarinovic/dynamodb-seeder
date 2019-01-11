@@ -14,7 +14,6 @@ AWS.config.update({
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 console.log("Importing into DynamoDB. Please wait.");
-console.log(options.table)
 var items = JSON.parse(fs.readFileSync('seed.json', 'utf8'));
 items.forEach(function(item) {
     var params = {
